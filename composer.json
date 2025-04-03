@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "kadirzengin215/tablaradmin",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
@@ -61,6 +61,18 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names='server,queue,vite'"
+        ],
+        "run:installation": [
+            "composer install --ansi",
+            "php artisan key:generate --ansi",
+            "php artisan migrate --seed --graceful --ansi"
+        ],
+        "run:lint": "pint --ansi",
+        "test:lint": "pint --test --ansi",
+        "test:pest": "pest --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:pest --parallel"
         ]
     },
     "extra": {
