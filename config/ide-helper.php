@@ -1,5 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
+use Illuminate\Session\Store;
+use Spatie\Macroable\Macroable;
+use Illuminate\Database\Eloquent\Builder;
+
 return [
 
     /*
@@ -181,8 +187,8 @@ return [
     */
 
     'extra' => [
-        'Eloquent' => ['Illuminate\Database\Eloquent\Builder', 'Illuminate\Database\Query\Builder'],
-        'Session' => ['Illuminate\Session\Store'],
+        'Eloquent' => [Builder::class, \Illuminate\Database\Query\Builder::class],
+        'Session'  => [Store::class],
     ],
 
     'magic' => [],
@@ -345,8 +351,8 @@ return [
     |
     */
     'macroable_traits' => [
-        Filament\Support\Concerns\Macroable::class,
-        Spatie\Macroable\Macroable::class,
+        \Filament\Support\Concerns\Macroable::class,
+        Macroable::class,
     ],
 
 ];

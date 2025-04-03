@@ -1,0 +1,58 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "align_multiline_comment": {
+            "comment_type": "phpdocs_only"
+        },
+        "array_push": true,
+        "assign_null_coalescing_to_coalesce_equal": true,
+        "binary_operator_spaces": {
+            "default": "align_single_space"
+        },
+        "class_keyword": true,
+        "class_reference_name_casing": true,
+        "clean_namespace": true,
+        "combine_consecutive_issets": true,
+        "combine_consecutive_unsets": true,
+        "declare_strict_types": true,
+        "empty_loop_condition": {
+            "style": "while"
+        },
+        "encoding": true,
+        "explicit_string_variable": true,
+        "fully_qualified_strict_types": {
+            "import_symbols": true,
+            "leading_backslash_in_global_namespace": true
+        },
+        "global_namespace_import": {
+            "import_constants": true,
+            "import_functions": true,
+            "import_classes": true
+        },
+        "linebreak_after_opening_tag": true,
+        "no_alternative_syntax": {
+            "fix_non_monolithic_code": false
+        },
+        "no_useless_concat_operator": {
+            "juggle_simple_strings": true
+        },
+        "numeric_literal_separator": {
+            "strategy": "use_separator"
+        },
+        "ordered_imports": {
+            "sort_algorithm": "length"
+        },
+        "ordered_interfaces": {
+            "order": "alpha"
+        },
+        "ordered_types": {
+            "null_adjustment": "always_last"
+        },
+        "return_assignment": true,
+        "simple_to_complex_string_variable": true,
+        "simplified_if_return": true,
+        "simplified_null_return": true,
+        "single_line_throw": true,
+        "ternary_to_null_coalescing": true
+    }
+}
